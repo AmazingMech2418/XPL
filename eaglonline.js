@@ -3,7 +3,7 @@
 // Some functions are still in progress.
 // If used for purposes other than EAGL programs, give credit
 // Liscenced under the MIT liscence
-// Author: amazinigmec2418/AmazingMech2418
+// Author: amazinigmech2418/AmazingMech2418
 
 var html = "";
 var js = `var c = document.getElementsByTagName("canvas")[0];
@@ -50,11 +50,7 @@ eval(code);
 function addTag(tag) {
 html+=tag;
 }
-let exec = require('child_process').exec;
-function open(file) {
-exec("start "+file);
-  exec("open "+file);
-}
+
 function cd(dir) {
 process.chdir(dir);
 }
@@ -62,23 +58,9 @@ function getDir() {
 return process.cwd;
 }
 
-let fs = require('fs');
-function read(file) {
-fs.readFileSync(file,{encoding:"utf-8"});
-}
-function write(file,content) {
-fs.writeFileSync(file,content);
-}
 
-var http = require('http');
-var url = require('url');
-function server(content,port) {
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  var q = url.parse(req.url, true).query;
-  res.end(content);
-}).listen(port);
-}
+
+
 // from ObjectifyJS strings
 var functionslol = {};
 String.prototype.splitBrackets=function(open,close) {
