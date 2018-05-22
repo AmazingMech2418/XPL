@@ -1,10 +1,10 @@
 var xplcodes = {
-popup: function(code) {alert(params[0]);},
-ask: function(code) {return prompt(params[0]);},
-
+popup: function(params,htm) {alert(params[0]);},
+ask: function(params,htm) {return prompt(params[0]);},
+value: function(params,htm) {return htm;}
 };
 function readread(code,params) {
-return xplcodes[code.tagName](params);
+return xplcodes[code.tagName](params,code.innerHTML);
 }
 function readline(code) {
 if (code.children.length > 0) {
