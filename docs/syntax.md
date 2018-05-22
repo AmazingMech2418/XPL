@@ -2,7 +2,8 @@
 XPL works like XML does but parses as code instead of storage.
 To start an XPL document, use this: `<xpl></xpl>`.
 You also need to add HTML for the XPL to create a website, so let's make it this:
-``` <xpl>
+``` 
+<xpl>
 <head><title>Hi!</title></head>
 <body><h1>Hi!</h1></body>
 </xpl>
