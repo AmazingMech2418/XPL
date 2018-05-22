@@ -38,4 +38,9 @@ var xpl = xml(code);
   xplscript(scripts[i]);
     
   }
+      var scripts = xpl.getElementsByTagName("EAGL");
+  for (var i = 0; i<scripts.length; i++) {
+  compile(scripts[i].innerHTML);
+    
+  }
 }
